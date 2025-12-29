@@ -4,6 +4,7 @@ from langchain_community.document_loaders import TextLoader
 from langchain_pinecone import PineconeVectorStore
 from langchain_text_splitters import CharacterTextSplitter
 from langchain_openai import AzureOpenAIEmbeddings
+
 load_dotenv()
 
 
@@ -17,8 +18,12 @@ if __name__ == "__main__":
     texts = text_splitter.split_documents(document)
     print(f"created {len(texts)} chunks")
 
-    embeddings=AzureOpenAIEmbeddings(azure_deployment=os.getenv("AZURE_OPENAI_EMBED_DEPLOYMENT"))
+    embeddings = AzureOpenAIEmbeddings(
+        azure_deployment=os.getenv("AZURE_OPENAI_EMBED_DEPLOYMENT")
+    )
 
     print("ingesting...")
-    PineconeVectorStore.from_documents(texts,embeddings,index_name=os.getenv("INDEX_NAME"))
+    PineconeVectorStore.from_documents(
+        texts, embeddings, index_name=os.getenv("INDEX_NAME")
+    )
     print("finish")
