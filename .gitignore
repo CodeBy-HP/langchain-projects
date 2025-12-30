@@ -195,3 +195,6 @@ data/
 models/
 
 script.txt
+nothing.py
+test.py
+.chroma/*
