@@ -1,0 +1,15 @@
+[project]
+name = "langchain-projects"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "black>=25.12.0",
+    "isort>=7.0.0",
+    "langchain>=1.2.0",
+    "langchain-openai>=1.1.6",
+    "langchain-tavily>=0.2.16",
+    "langgraph>=1.0.5",
+    "python-dotenv>=1.2.1",
+]
