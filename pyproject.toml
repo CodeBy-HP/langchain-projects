@@ -13,6 +13,7 @@ dependencies = [
     "langchain-chroma>=1.1.0",
     "langchain-community>=0.4.1",
     "langchain-openai>=1.1.6",
+    "langchain-tavily>=0.2.16",
     "langchainhub>=0.1.21",
     "langgraph>=1.0.5",
     "pytest>=9.0.2",
